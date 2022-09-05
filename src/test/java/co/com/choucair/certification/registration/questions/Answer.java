@@ -1,9 +1,8 @@
 package co.com.choucair.certification.registration.questions;
 
-import co.com.choucair.certification.registration.userinterface.uTestRegisterForm;
+import co.com.choucair.certification.registration.userinterface.uTestRegisterFormPersonal;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Text;
 
 public class Answer implements Question {
 
@@ -15,18 +14,24 @@ public class Answer implements Question {
     }
 
     public static Answer toThe (String question){
+        return new Answer(question);
 
     }
 
     @Override
     public Object answeredBy(Actor actor) {
-        String text = Text.of(uTestRegisterForm.WELCOME_TEXT).viewed
         boolean result;
-                if(question.equals(text)){
-                    result = true;
-                } else {
-                    result = false;
-                }
+
+        boolean isVisible;
+
+        if (uTestRegisterFormPersonal.WELCOME_TEXT.isVisibleFor(actor)){
+            isVisible =true;
+        } else {
+            isVisible = false;
+        }
+
+        result = isVisible;
+
         return result;
     }
 }
