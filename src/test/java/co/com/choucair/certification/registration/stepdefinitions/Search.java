@@ -11,12 +11,13 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-public class SearchAndRegister {
+public class Search {
 
     @Before
     public void setStage(){
         OnStage.setTheStage(new OnlineCast());
     }
+
 
     @Given("^The user is on uTest$")
     public void theUserIsOnGoogle() {
@@ -35,4 +36,5 @@ public class SearchAndRegister {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
 
     }
+
 }

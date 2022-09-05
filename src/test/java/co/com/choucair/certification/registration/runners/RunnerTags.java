@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 
 
-@CucumberOptions(features = "src/test/resources/features/searchAndRegister.feature",
-        tags = "@stories",
+@CucumberOptions(features = {"src/test/resources/features/search.feature","src/test/resources/features/register.feature"},
+        tags = "@story1,@story2",
         glue = "co.com.choucair.certification.registration.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 
