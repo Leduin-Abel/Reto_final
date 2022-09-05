@@ -15,8 +15,10 @@ import net.serenitybdd.screenplay.actions.selectactions.SelectByValueFromBy;
 import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.ui.Dropdown;
 import net.serenitybdd.screenplay.ui.Select;
 import org.junit.Before;
+import org.openqa.selenium.By;
 
 public class Register {
 
@@ -51,7 +53,6 @@ public class Register {
 
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Click.on(uTestRegisterFormDevices.MOBILE_BOX),
-                Enter.theValue("Apple").into(uTestRegisterFormDevices.MOBILE_BOX),
                 Click.on(uTestRegisterFormDevices.MOBILE_MENU),
                 Click.on(uTestRegisterFormDevices.MODEL_BOX),
                 Click.on(uTestRegisterFormDevices.MODEL_MENU),

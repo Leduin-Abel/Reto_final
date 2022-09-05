@@ -2,6 +2,7 @@ package co.com.choucair.certification.registration.userinterface;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.ui.Dropdown;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
